@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000/chat";
+const API_URL = "https://aurevix-coach-backend.onrender.com/chat";
 
 function addMessage(role, text) {
   const chat = document.getElementById("chat-window");
