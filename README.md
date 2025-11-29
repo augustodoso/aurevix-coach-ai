@@ -1,222 +1,229 @@
-![Aurevix Coach AI Banner](./frontend/assets/aurevix-banner.png)
-<!-- Sugestão: banner dark com a frase
-"Aurevix Coach AI — Construído por Aurevix Tech" -->
-
 # Aurevix Coach AI
 
-> Assistente virtual **educativo** de informação e bem-estar, construído pela **Aurevix Tech**, com foco em ética, segurança e respeito à atuação do Profissional de Educação Física.
+Assistente virtual **educativo** de treino e bem-estar desenvolvido pela **Aurevix Tech**.  
+O sistema fornece explicações gerais sobre exercícios, organização de treinos, aquecimento, mobilidade e rotinas semanais — sempre com foco em **segurança, ética e respeito às normas do CREF**.
+
+Este projeto utiliza inteligência artificial para educar, informar e orientar, mas **não substitui** um Profissional de Educação Física.
 
 ---
 
-## 🔗 Links importantes
+## 🔗 Links do Projeto
 
-- 🌐 **App online (frontend)**: https://aurevix-coach-ai.vercel.app/  
-- 🧠 **API (backend – FastAPI)**: https://aurevix-coach-backend.onrender.com  
-- 📚 **Documentação da API (Swagger)**: https://aurevix-coach-backend.onrender.com/docs  
-
----
-
-## 🧩 Visão geral
-
-O **Aurevix Coach AI** é um assistente virtual educativo que:
-
-- responde dúvidas gerais sobre **treino e bem-estar**;
-- gera **exemplos genéricos** de treinos (full body, organização semanal etc.);
-- ajuda com ideias de **aquecimento, mobilidade, desaquecimento e motivação**;
-- reforça, em todas as interações, que **não substitui um Profissional de Educação Física**.
-
-> ⚖️ **Ponto central**: o projeto foi pensado para ser **CREF-friendly**, mantendo o foco em **informação educativa**, sem prescrição individualizada ou diagnóstico.
+- **Aplicação Web (Frontend):** https://aurevix-coach-ai.vercel.app/  
+- **API Online (Backend):** https://aurevix-coach-backend.onrender.com  
+- **Documentação da API (Swagger):** https://aurevix-coach-backend.onrender.com/docs  
+- **Repositório GitHub:** https://github.com/augustodoso/aurevix-coach-ai  
 
 ---
 
-## ✨ Funcionalidades atuais
+## 🧩 Sobre o Projeto
 
-- 💬 **Chat em tempo real** com IA (OpenAI `gpt-4.1-mini`);
-- 🧠 **Prompt sistêmico educativo** (focado em linguagem clara e segura);
-- 🏋️ **Exemplos genéricos de treinos** (full body, rotinas gerais, aquecimento/desaquecimento);
-- 📅 **Sugestões de organização semanal de treinos**, em nível informativo;
-- ⚠️ **Mensagens de aviso e disclaimer** sobre:
-  - consulta ao Profissional de Educação Física;
-  - procura de médico/fisioterapeuta em caso de dor, lesões, sintomas estranhos;
-- 🎨 **Interface moderna**:
-  - tema dark;
-  - identidade visual **Aurevix Tech** (logo, tipografia, cores);
-  - layout responsivo básico para desktop e mobile.
+O Aurevix Coach AI foi criado com os seguintes objetivos:
+
+- Explicar conceitos básicos de treino e bem-estar  
+- Oferecer **exemplos genéricos** de estruturas de treino  
+- Ajudar na organização semanal  
+- Incentivar mobilidade, aquecimento e hábitos saudáveis  
+- Garantir avisos éticos obrigatórios  
+- Proteger o usuário respeitando a legislação brasileira  
 
 ---
 
-## 🏗 Arquitetura do projeto
+## ✨ Funcionalidades
 
-**Monorepo simples**:
+- 💬 Chat IA com respostas educativas e claras  
+- 🧠 Modelo OpenAI (GPT-4.1-mini)  
+- 🏋️ Exemplos genéricos de treinos (full body, ABC etc.)  
+- ⚠️ Avisos automáticos conforme normas do CREF  
+- 🎨 Interface moderna com identidade Aurevix  
+- 🚀 Frontend rápido hospedado na Vercel  
+- 📡 Backend FastAPI hospedado no Render  
+
+---
+
+## 🏗 Arquitetura do Projeto
 
 ```text
 aurevix-coach-ai/
-├── backend/           # API em FastAPI (Python)
-│   ├── main.py        # Endpoints (inclui /chat)
-│   ├── config.py      # Configurações (modelo, etc.)
-│   ├── schemas.py     # Pydantic models (request/response)
+├── backend/
+│   ├── main.py
+│   ├── config.py
+│   ├── schemas.py
 │   └── services/
-│       ├── coach_prompt.py   # Prompt sistêmico
-│       └── openai_client.py  # Cliente OpenAI (SDK 1.x)
+│       ├── coach_prompt.py
+│       └── openai_client.py
 │
-├── frontend/          # Interface web (HTML/CSS/JS)
+├── frontend/
 │   ├── index.html
 │   ├── styles.css
 │   ├── script.js
 │   └── assets/
-│       └── aurevix_logo.png  # Logo Aurevix utilizada no app
+│       └── aurevix_logo.png
 │
-├── requirements.txt   # Dependências do backend
-└── .gitignore         # Ignora .env, venv, etc.
+├── requirements.txt
+└── .gitignore
+```
 
-Infraestrutura usada
+### Infraestrutura
 
-🔙 Backend na Render (Free Tier)
+- **Frontend:** Vercel  
+- **Backend:** Render (Free Tier)  
+- **IA:** OpenAI GPT-4.1-mini  
+- **Ambiente:** Python 3.11 + FastAPI  
 
-🔜 Frontend na Vercel (Static Site)
+---
 
-🤖 OpenAI GPT-4.1-mini (via SDK 1.x)
+## 🛠 Tecnologias Utilizadas
 
-🔐 Variáveis no Render (sem expor .env)
+### **Frontend**
+- HTML5  
+- CSS3  
+- JavaScript  
+- Fetch API  
 
-🧰 Tecnologias
+### **Backend**
+- Python 3.11  
+- FastAPI  
+- Uvicorn  
+- Pydantic v2  
+- OpenAI SDK 1.x  
 
-Backend
+### **Infra**
+- Vercel  
+- Render  
+- GitHub  
 
-FastAPI
+---
 
-Uvicorn
+## 🚀 Como Rodar Localmente
 
-Pydantic v2
+### 1. Clonar o repositório
 
-Starlette
-
-Python 3.11
-
-OpenAI SDK 1.x
-
-Frontend
-
-HTML5
-
-CSS3
-
-JavaScript
-
-Fetch API
-
-Infra
-
-Render (Backend)
-
-Vercel (Frontend)
-
-GitHub (Versionamento)
-
-🚀 Como rodar localmente
-1. Clonar o repositório
-
+```bash
 git clone https://github.com/augustodoso/aurevix-coach-ai.git
 cd aurevix-coach-ai
+```
 
-2. Backend
-Criar ambiente virtual:
+---
 
+## 🖥 Backend
+
+### Criar ambiente virtual
+
+```bash
 python -m venv venv
+```
 
 Ativar:
-    Windows:
-    venv\Scripts\activate
 
-    Linux/macOS:
-    source venv/bin/activate
+**Windows**
+```bash
+venv\Scripts\activate
+```
 
-Instalar dependências:
+**Linux/Mac**
+```bash
+source venv/bin/activate
+```
+
+### Instalar dependências
+
+```bash
 pip install -r requirements.txt
+```
 
-Criar .env na raiz:
+### Criar arquivo `.env` na raiz:
+
+```env
 OPENAI_API_KEY=sua_chave_aqui
+```
 
-Executar backend:
+### Executar o servidor
+
+```bash
 uvicorn backend.main:app --reload
+```
 
-Acessar:
+Acessos locais:
 
-http://127.0.0.1:8000
+- API: http://127.0.0.1:8000  
+- Documentação: http://127.0.0.1:8000/docs  
 
-http://127.0.0.1:8000/docs
+---
 
-3. Frontend
+## 🌐 Frontend
 
-Na pasta frontend/, abra o index.html com Live Server do VS Code.
+Abra o arquivo:
 
-Ou abra direto no navegador.
+```
+frontend/index.html
+```
 
-Configurar API no script.js:
+ou use o **Live Server** do VS Code.
 
+No `script.js`, altere para ambiente local:
+
+```js
 const API_URL = "http://localhost:8000/chat";
-// Ou produção:
-// const API_URL = "https://aurevix-coach-backend.onrender.com/chat";
+```
 
-📡 Endpoint principal
-POST /chat
+---
 
-URL de produção:
-https://aurevix-coach-backend.onrender.com/chat
+## 📡 Endpoint Principal
+
+### POST `/chat`
 
 Exemplo:
+
+```json
 {
   "message": "Me dá um exemplo de treino full body."
 }
+```
 
-⚖️ Aviso ético & CREF
+---
 
-O Aurevix Coach AI:
+## ⚖️ Aviso Ético Importante (CREF)
 
-NÃO substitui um Profissional de Educação Física;
+Este sistema fornece apenas:
 
-NÃO faz prescrição individual;
+- orientações **educativas**  
+- explicações gerais sobre treino e bem-estar  
+- exemplos genéricos de exercícios  
 
-NÃO faz diagnósticos;
+Ele **NÃO**:
 
-NÃO é ferramenta clínica;
+- substitui um Profissional de Educação Física  
+- cria treinos personalizados  
+- realiza diagnósticos  
+- avalia condições clínicas ou físicas  
+- substitui consulta com médico ou fisioterapeuta  
 
-NÃO substitui avaliação presencial.
+---
 
-Objetivo: educação, organização geral e bem-estar.
+## 🗺 Roadmap
 
-Em caso de dores, lesões ou sintomas → procurar médico ou fisioterapeuta.
+- [x] Backend FastAPI  
+- [x] Frontend Vercel  
+- [x] Integração com OpenAI  
+- [ ] Onboarding inteligente (V2)  
+- [ ] Histórico salvo (localStorage)  
+- [ ] Modo Informativo Jiu-Jitsu  
+- [ ] Tema escuro/tema claro  
+- [ ] Multi-idioma  
 
-🗺 Roadmap
+---
 
- Backend no Render
+## 👤 Autor
 
- Frontend na Vercel
+**Augusto Cezar de Macedo Doso**  
+- GitHub: https://github.com/augustodoso  
+- LinkedIn: https://www.linkedin.com/in/augusto-cezar-de-macedo-doso-38b83537b  
+- Marca: **Aurevix Tech – "Technology Crafted With Precision."**
 
- Integração app + API
+---
 
- Onboarding V2 (tela inicial inteligente)
+## 📜 Licença
 
- Histórico salvo no navegador (localStorage)
-
- Modo Jiu-Jitsu informativo
-
- Multi-idioma
-
- UI/UX melhorada com animações
-
- 👤 Autor
-
-Augusto Cezar de Macedo Doso
-
-GitHub: https://github.com/augustodoso
-
-LinkedIn: https://www.linkedin.com/in/augusto-cezar-de-macedo-doso-38b83537b
-
-Marca: Aurevix Tech – “Technology Crafted With Precision.”
-
-📄 Licença
-
-Projeto aberto para estudo e portfólio.
-Se for usar comercialmente, adapte com responsabilidade e respeite legislação vigente (especialmente CREF/CONFEF para atividades físicas).
-
+Projeto aberto para estudos, portfólio e uso educacional.  
+Respeite as normas profissionais e legislação vigente.
