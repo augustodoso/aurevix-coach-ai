@@ -5,20 +5,29 @@
   <title>Aurevix Coach AI • Aurevix Tech</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
+<!-- ============================= -->
+<!-- REDIRECIONA PARA O ONBOARDING -->
+<!-- ============================= -->
+<script>
+  if (!localStorage.getItem("avx_first_time")) {
+      window.location.href = "onboarding.html";
+  }
+</script>
+
 <body>
   <div class="bg-grid"></div>
 
   <div class="app-container">
-    
-    <!-- =========================== -->
-    <!-- HEADER COM LOGO AUREVIX     -->
-    <!-- =========================== -->
+
+    <!-- ============================= -->
+    <!-- HEADER GERAL DO APP          -->
+    <!-- ============================= -->
     <header class="app-header">
       <div class="brand">
         <div class="logo">
           <img src="./assets/aurevix_logo.png" alt="Aurevix Logo">
         </div>
-
         <div class="brand-text">
           <h1>Aurevix Coach AI</h1>
           <p>Assistente virtual de informação e bem-estar • by Aurevix Tech</p>
@@ -26,49 +35,56 @@
       </div>
     </header>
 
-    <!-- MAIN -->
+    <!-- ============================= -->
+    <!-- MAIN                          -->
+    <!-- ============================= -->
     <main class="app-main">
-      
-      <!-- CARD DO CHAT -->
+
+      <!-- ============================= -->
+      <!-- ÁREA DO CHAT                  -->
+      <!-- ============================= -->
       <section class="chat-card">
+
         <div class="chat-header">
           <h2>Chat</h2>
-          <span class="status-pill">Online</span>
+
+          <!-- BOTÃO LIMPAR CHAT -->
+          <div class="chat-header-right">
+            <span class="status-pill">Online</span>
+            <button id="clear-chat-btn" class="clear-chat-btn">Limpar chat</button>
+          </div>
         </div>
 
         <div id="chat-window" class="chat-window">
-          <!-- Mensagem inicial -->
-          <div class="msg bot">
-            <strong>Aurevix Coach AI:</strong><br>
-            Fala, atleta! 👋<br>
-            Eu sou um assistente virtual de informação e bem-estar. Posso te mostrar
-            <em>exemplos genéricos</em> de treinos, falar de organização semanal, aquecimento,
-            mobilidade e motivação.<br><br>
-            Me conta: qual é o teu objetivo hoje — ganhar massa, emagrecer, melhorar no Jiu, ou outro?
-          </div>
+          <!-- O script.js insere o histórico OU as boas-vindas -->
         </div>
 
         <div class="input-row">
           <input
             id="user-input"
             type="text"
-            placeholder="Digite sua pergunta (ex: 'me dá um exemplo de treino full-body para iniciantes')..."
+            placeholder="Digite sua pergunta..."
           />
           <button id="send-btn">Enviar</button>
         </div>
+
       </section>
 
-      <!-- ASIDE -->
+      <!-- ============================= -->
+      <!-- CARD LATERAL (INFORMAÇÕES)    -->
+      <!-- ============================= -->
       <aside class="side-card">
         <h3>Sobre o Aurevix Coach AI</h3>
+
         <p>
           Este sistema é um <strong>assistente virtual educativo</strong> criado pela
-          <strong>Aurevix Tech</strong>. Ele não substitui um profissional de Educação Física.
+          <strong>Aurevix Tech</strong>. 
+          Ele não substitui um profissional de Educação Física.
         </p>
 
         <ul class="feature-list">
           <li>💡 Explicações gerais sobre treino e bem-estar</li>
-          <li>📋 Exemplos genéricos de rotinas (full-body, ABC, etc.)</li>
+          <li>📋 Exemplos genéricos de rotinas</li>
           <li>🧠 Organização básica de treinos e motivação</li>
           <li>⚖️ Focado em segurança, ética e respeito ao CREF</li>
         </ul>
@@ -76,23 +92,25 @@
         <div class="disclaimer">
           <strong>Aviso importante:</strong><br>
           As orientações fornecidas pelo Aurevix Coach AI são
-          <strong>sugestões educativas e gerais</strong>.
+          <strong>sugestões educativas e gerais</strong>. 
           Para um treino personalizado e seguro, consulte um
           <strong>profissional de Educação Física habilitado</strong>.
-          Em caso de dor intensa, lesão ou sintomas estranhos, procure um médico ou fisioterapeuta.
         </div>
       </aside>
     </main>
 
-    <!-- FOOTER -->
+    <!-- ============================= -->
+    <!-- FOOTER                        -->
+    <!-- ============================= -->
     <footer class="app-footer">
       <span>© Aurevix Tech • “Technology Crafted With Precision.”</span>
       <span class="footer-separator">•</span>
-      <span>Projetado por Augusto Cezar de Macedo Doso (augustodoso)</span>
+      <span>Desenvolvido por Augusto Cezar de Macedo Doso (augustodoso)</span>
     </footer>
 
   </div>
 
+  <!-- SCRIPT PRINCIPAL -->
   <script src="script.js"></script>
 </body>
 </html>

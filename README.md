@@ -204,9 +204,8 @@ Este sistema fornece apenas:
 - [x] Backend FastAPI  
 - [x] Frontend Vercel  
 - [x] Integração com OpenAI  
-- [ ] Onboarding inteligente (V2)  
-- [ ] Histórico salvo (localStorage)  
-- [ ] Modo Informativo Jiu-Jitsu  
+- [x] Onboarding inteligente (V2)  
+- [x] Histórico salvo (localStorage)   
 - [ ] Tema escuro/tema claro  
 - [ ] Multi-idioma  
 

@@ -282,6 +282,20 @@ body {
 }
 
 /* Responsividade */
+chat-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clear-chat-btn {
+  background: transparent;
+  border: none;
+  color: #8b8fb0;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 4px;
+}
 
 @media (max-width: 900px) {
   .app-main {
