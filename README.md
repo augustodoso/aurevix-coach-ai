@@ -191,13 +191,11 @@ Este sistema fornece apenas:
 - explicações gerais sobre treino e bem-estar  
 - exemplos genéricos de exercícios  
 
-Ele **NÃO**:
-
-- substitui um Profissional de Educação Física  
-- cria treinos personalizados  
-- realiza diagnósticos  
-- avalia condições clínicas ou físicas  
-- substitui consulta com médico ou fisioterapeuta  
+-Ele **NÃO** substitui um Profissional de Educação Física  
+-Ele **NÃO** cria treinos personalizados  
+-Ele **NÃO** realiza diagnósticos  
+-Ele **NÃO** avalia condições clínicas ou físicas  
+-Ele **NÃO** substitui consulta com médico ou fisioterapeuta  
 
 ---
 
